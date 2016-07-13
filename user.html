@@ -1,0 +1,37 @@
+<div>
+    <font color=red>{{error}}</font><br/>
+    <a href="#/main">Back to search</a>
+</div>
+
+<div id="user">
+    <figure>
+        <img ng-src="{{user.avatar_url}}" title="{{user.name}}" />
+        <figcaption>{{user.name}}</figcaption>
+    </figure>
+
+    <div id="repos" ng-hide="user.repos.length <= 0">
+        Order:
+        <select ng-model="reposSortOrder">
+            <option value="+name">Name</option>
+            <option value="-stargazers_count">Stars</option>
+            <option value="+language">Language</option>
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Stars</th>
+                    <th>Language</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="repo in user.repos | orderBy:reposSortOrder">
+                    <td><span class="clickable" ng-click="getRepoDetails(repo.owner.login, repo.name)">{{repo.name}}</span></td>
+                    <td>{{repo.stargazers_count | number}}</td>
+                    <td>{{repo.language}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+/* Styles go here */
+
+body, a {
+    font-family: 'Calibri';
+    background-color: #363636;
+}
+
+figure img {
+    border-radius: 5px;
+    width: 200px;
+}
+
+.lightred {
+    color: #fd5656;
+}
+
+h1,
+figure,
+figure figcaption,
+table th {
+    text-align: center;
+    overflow: hidden;
+}
+
+table {
+    border: 1px solid white;
+    border: collapse;
+}
+
+body, a {
+    color: white;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+#condtributors {
+  width: 100%;  
+}
+
+#contributors figure {
+    display: inline-block;
+    text-align: left;
+}
+
+#contributors figure img {
+    transition: 0.3s;
+    border: 5px solid transparent;
+    border-radius: 100%;
+    width: 100px;
+}
+
+#contributors figure img:hover {
+    border: 5px solid white;
+}
+

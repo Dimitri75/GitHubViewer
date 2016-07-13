@@ -1,0 +1,7 @@
+<div id="main">
+    <span ng-hide="countdown <= 0">Auto-search in {{countdown}}</span>
+    <form ng-submit="search(username)" name="searchUser">
+        <input type="search" ng-model="username" placeholder="Username to find" required/>
+        <input type="submit" value="Search"/>
+    </form>
+</div>

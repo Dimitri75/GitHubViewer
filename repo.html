@@ -1,0 +1,23 @@
+<div>
+    <font color=red>{{error}}</font><br/>
+    <a href="#/main">Back to search</a>
+</div>
+
+<div id="repo">
+    <h2 class="lightred">{{reponame}}</h2>
+    <a href="{{repo.html_url}}" target=_blank>View on GitHub</a><br/>
+    Subscribers count : {{repo.subscribers_count}}<br/>
+    Owner :<br/>
+    <figure>
+        <img src="{{repo.owner.avatar_url}}" title="{{repo.owner.login}}"/>
+        <figcaption>{{repo.owner.login}}</figcaption>
+    </figure>
+    
+    <h3>Contributors</h3>
+    <div id="contributors">
+        <figure ng-repeat="contributor in contributors">
+            <img class="clickable" ng-click="searchUser(contributor.login)" src="{{contributor.avatar_url}}" title="{{contributor.login}}"/>
+            <figcaption>{{contributor.login}}</figcaption>
+        </figure>
+    </div>
+</div>

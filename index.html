@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="GitHubViewer">
+
+<head>
+    <script src="https://code.angularjs.org/1.5.5/angular.js" data-semver="1.5.5" data-require="angularjs@1.5.5"></script>
+    <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+    <script data-require="angular-route@*" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular-route.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <script src="app.js"></script>
+    <script src="MainController.js"></script>
+    <script src="UserController.js"></script>
+    <script src="RepoController.js"></script>
+    <script src="github.js"></script>
+</head>
+
+<body>
+    <h1>GitHub Viewer!</h1>
+    <div ng-view>
+        <!-- Content dynamically displayed by Angular -->
+    </div>
+</body>
+
+</html>
